@@ -1,8 +1,12 @@
-﻿namespace Utm.Builder.Core.ValueObjects;
+﻿using System.Text.RegularExpressions;
+using Utm.Builder.Core.ValueObjects.Exceptions;
+
+namespace Utm.Builder.Core.ValueObjects;
 
 
 public class Url : ValueObject
 {
+
     /// <summary>
     /// Create a new URL
     /// </summary>
@@ -10,6 +14,7 @@ public class Url : ValueObject
     public Url(string address)
     {
         Address = address;
+        InvalidUrlException.ThrowIfInvalidUrl(address);
     }
 
     /// <summary>
