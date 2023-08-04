@@ -1,6 +1,3 @@
 ﻿namespace Utm.Builder.Core.ValueObjects;
 
-public abstract class ValueObject
-{
-
-}
+public abstract class ValueObject { }
